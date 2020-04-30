@@ -10,6 +10,23 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <section>
+        <h1>Nataliya's Little Library</h1>
+        <nav>
+          <ul>
+            <li><a href="/">Home</li>
+            <li><a href="/books">Books List</a></li>
+            <li>New Book</li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+      <footer>
+        <p>All rights reserved</p>
+      </footer>
   </body>
 </html>

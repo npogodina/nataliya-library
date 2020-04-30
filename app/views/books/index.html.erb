@@ -1,0 +1,13 @@
+<h2>Books</h1>
+
+<% if @books.length > 0 %>
+  <ul>
+    <% @books.each do |book|  %>
+      <li>
+        <%= book[:title] %> By: <%= book[:author] %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <h3>No books in the system!</h3>
+<% end %>
