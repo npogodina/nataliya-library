@@ -16,8 +16,8 @@
         <nav>
           <ul>
             <li><a href="/">Home</li>
-            <li><a href="/books">Books List</a></li>
-            <li>New Book</li>
+            <li><a href="<%= books_path %>">Books List</a></li>
+            <li><%= link_to "Add Book To Library", new_book_path %></li>
           </ul>
         </nav>
       </section>

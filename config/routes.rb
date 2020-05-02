@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   patch '/books/:id', to: 'books#update'
   delete '/books/:id', to: 'books#destroy'
 
+  # patch '/books/:id/mark_read', to: 'books#mark_read', as: 'book_read'
+
 end
