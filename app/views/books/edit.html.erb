@@ -1,1 +1,15 @@
-<h1>Edit Form</h1>
+<h2>Update Book Info</h2>
+<%= form_with model: @book, class: "update-book" do |f| %>
+  <p>Please, edit as appropriate:</p>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.submit "Update Book", class: "book-button" %>
+<% end %>
