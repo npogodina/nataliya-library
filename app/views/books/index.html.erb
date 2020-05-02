@@ -1,10 +1,10 @@
-<h2>Books</h1>
+<h2>Books</h2>
 
 <% if @books.length > 0 %>
   <ul>
     <% @books.each do |book|  %>
       <li>
-        <%= book[:title] %> By: <%= book[:author] %>
+        <%= book.title %> By: <%= book.author %>
       </li>
     <% end %>
   </ul>

@@ -9,8 +9,13 @@ describe BooksController do
   end
 
   describe "show" do
+    before do
+      @book = Book.create(title: "Little Blue Truck")
+    end
+
     it "shows the page for an existing book" do
-      get "/books/1"
+      book_id = @book.id
+      get "/books/#{book_id}"
       must_respond_with :success # same as: :ok
     end
 
@@ -27,7 +32,7 @@ describe BooksController do
     # end
 
     it "shows 404 for a non-existing book" do
-      get "/books/5"
+      get "/books/666"
       must_respond_with :not_found # same as :missing
     end
   end
